@@ -14,7 +14,7 @@ import sour from './images/sour.jpg'
                             <h2 className='card__tittle'>Salad</h2>
                             <p className='card__discription'>Lorem ipsum dolor sit amet.</p>
                             </div>
-                            <button className='card__button btn-primary'>View Recipe</button>
+                            <button className='card__btn'>View Recipe</button>
                     </div>
                     <div className="card">
                         <div className="card__body">
@@ -22,7 +22,7 @@ import sour from './images/sour.jpg'
                             <h2 className='card__tittle'>Chicken</h2>
                             <p className='card__discription'>Lorem ipsum dolor sit amet.</p>
                             </div>
-                            <button className='card__button btn-primary'>View Recipe</button>
+                            <button className='card__btn'>View Recipe</button>
                     </div>
                     <div className="card">
                         <div className="card__body">
@@ -30,7 +30,7 @@ import sour from './images/sour.jpg'
                             <h2 className='card__tittle'>Pizza</h2>
                             <p className='card__discription'>Lorem ipsum dolor sit amet.</p>
                             </div>
-                            <button className='card__button btn-primary'>View Recipe</button>
+                            <button className='card__btn'>View Recipe</button>
                     </div>
                 </div>
            

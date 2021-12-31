@@ -157,20 +157,29 @@ a:hover {
   object-fit: cover;
 }
 
-.card .card__button {
-  border-radius: 30px;
-  margin-top: 0;
-  margin-bottom: 0%;
-  padding: 0;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
   gap: 2rem;
   justify-content: center;
 }
-
+.card__btn {
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem;
+  border: 2px solid var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+  border-radius: 15px;
+  transition: color 200ms ease-in;
+}
 .card:hover {
-  transform: scale(1.17);
+  transform: scale(1.07);
+}
+
+.card:hover .card__btn {
+  background: rgb(245, 67, 67);
+  color: white;
 }
