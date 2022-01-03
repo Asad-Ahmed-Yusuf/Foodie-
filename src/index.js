@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import Home from "./Pages/Home";
 import NavBar from "./components/navbar";
 import Input from "./components/input";
-import Card from './components/card';
+import Popup from './components/popup';
+
 ReactDOM.render(
   
-    <Card />,
+    <Home/>,
   document.getElementById('root')
 );
 

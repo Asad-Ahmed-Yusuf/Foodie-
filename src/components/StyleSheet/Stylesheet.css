@@ -17,77 +17,35 @@ body {
   box-sizing: border-box;
 }
 
-.ul {
-  display: inline-block;
-  width: 100%;
+h2 {
+  font-size: small;
 }
-
+.background {
+  width: 100%;
+  height: 5rem;
+}
+.hero_header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  color: red;
+  margin-top: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  font-weight: 1000;
+  font-size: bold;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0;
+  flex-shrink: 1;
+}
+/*NavBar*/
 .navbar-nav {
   float: right;
   margin: 0;
 }
-.navbar-nav > li {
-  float: right;
-}
-.list {
-  list-style: none;
-
-  padding-left: 0;
-}
-
-.list--inline .list__item {
-  display: inline-block;
-  margin-right: 2rem;
-}
-a {
-  text-decoration: none;
-  color: black;
-  font-size: medium;
-  font-weight: 600;
-}
-
-a:hover {
-  color: black;
-  opacity: 50%;
-  z-index: -1;
-}
-
-.list-span {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
-  flex-shrink: 0;
-  flex-flow: row wrap;
-
-  align-items: center;
-}
-
-.icon {
-  width: 55px;
-  height: 55px;
-  margin-left: 10px;
-}
-
-.list-item {
-  margin: 5px;
-}
 
 /*Button*/
-.btn-login {
-  margin-right: 15px;
-  height: 50px;
-  width: 90px;
-  color: black;
-  background: white;
-
-  font-size: medium;
-  font-weight: 600;
-}
-
-.btn-login:hover {
-  background-color: rgb(44, 69, 211);
-}
 
 .btn--accent {
   background: var(--color-accent);
@@ -105,17 +63,7 @@ a:hover {
   font-size: 2rem;
   outline: 0;
   padding: 1.5rem 3.5rem;
-}
-
-.input-group {
-  border: 1px solid #ccc;
-  border-radius: grey;
-  display: flex;
-}
-
-.input-group .input {
-  border: 0;
-  flex-grow: 1;
+  position: relative;
 }
 
 .input-group .btn {
@@ -123,21 +71,53 @@ a:hover {
 }
 
 .input-btn {
+  display: flex;
+  flex-direction: row;
   border-radius: 40px;
-  border: 0;
   font-size: 1.8rem;
   font-weight: 600;
   color: white;
+  flex-shrink: 1;
   margin: 1rem 0;
-  outline: 0;
-  padding: 2rem 4vw;
-  text-align: center;
+  flex-grow: -1;
+  padding: 2rem 2vw;
+  text-align: left;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
+  position: relative;
+  z-index: 1;
 }
 
 .input-btn:hover {
-  background: rgb(95, 216, 186);
+  color: white;
+  background: rgb(247, 73, 73);
+}
+
+.input__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 8rem;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  margin-top: 1rem;
+  border: hidden;
+  flex-grow: -1;
+}
+
+@media screen and (max-width: 400px) {
+  .input__container {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 8rem;
+    margin-top: 8rem;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    border: hidden;
+  }
 }
 
 /* Card*/
@@ -162,6 +142,7 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
   gap: 2rem;
   justify-content: center;
+  margin-top: 3rem;
 }
 .card__btn {
   padding: 1rem;
@@ -176,10 +157,19 @@ a:hover {
   transition: color 200ms ease-in;
 }
 .card:hover {
+  transition: 0.5s;
   transform: scale(1.07);
 }
 
 .card:hover .card__btn {
   background: rgb(245, 67, 67);
   color: white;
+}
+
+.close__btn {
+  background: red;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+.close__body {
 }
