@@ -18,7 +18,7 @@ const dumpydata1 = {
     description: "American Burger with fries",
 }
 
-var LoadApi = false;
+var LoadApi = true;
 
 const arr = [dumpydata1]
 
@@ -41,9 +41,10 @@ function Home () {
             .then(function(json) {
                 json.results.map(data => {
                    if(data.item == undefined){return}
-                    console.log(data.item)
                    var item = {name: data.item.name, imgLink: data.item.thumbnail_url, description: data.item.description, instructions: data.item.instructions, video: data.item.original_video_url }
-                   items.push(item);
+                   if(item.video != undefined){
+                    items.push(item);
+                    }
                 })
                 setState({isLoaded: true, data: items})
         
@@ -57,12 +58,15 @@ function Home () {
             <Heading></Heading>
             
             <div><Input></Input></div>
-          
-            
+
            
                 {state.isLoaded == true && 
+                    <div>
+                    <h1 className='Title'>Recipes To Try</h1>
                     <div className='container'>
+                    
                     {state.data.map( data => <Card {...data}></Card>)}
+                    </div>
                     </div>
                 }
         </div>

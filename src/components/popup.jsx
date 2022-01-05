@@ -17,8 +17,8 @@ export function Popup({ open ,props , onClose}){
                     </button>
                             <p className='close__body'>Close</p>
                                
-                              <Card></Card>                                    
-                                     </div>
+        <Card></Card>                                    
+        </div>
                 
 
     </div>
